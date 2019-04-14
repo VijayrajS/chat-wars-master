@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+	
+	{% block title %}
+		Sword upgraded!
+	{% endblock %}
+	
+	{% block head %}
+		<link type="text/css" href="{{url_for('static', filename='loginReg.css')}}" rel="stylesheet"></link>
+	{% endblock %}
+
+    
+	{% block body %}
+		<div class="container">
+			<h1 class="P1"><b>SWORD UPGRADED</b></h1>
+			<h2>Sword upgraded to level {{user.sword}}</h2>
+		</div>
+	{% endblock %}

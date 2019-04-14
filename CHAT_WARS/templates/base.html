@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <head>
+    <title>{% block title %}{% endblock %}</title>
+        <link rel=stylesheet type=text/css href="{{url_for('static', filename='base.css')}}">
+        {% block head %}{% endblock %}
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+    <div class="topnav">   
+      <a class="menu" href="/home">>HOME</a>
+      <a class="menu" href="/logout">>LOGOUT</a>
+    </div>
+    <br><br>
+    <div class="content">
+            {% block body %}
+            {% endblock %}
+    </div>
+    <footer>
+        <br>
+        <br>
+            <h2><b>{{user.username}}</b> of <b>{{user.castle.name}}</b> Castle</h2>
+            <h2><b>LEVEL  : </b>{{user.level}}</h2>
+            <h2 id="attack"><b>ATTACK : </b> {{user.attack}}</h2>
+            <h2 id="defense"><b>DEFENSE: </b>{{user.defense}}</h2>
+            <h2><b>XP     : </b>{{user.exp}}</h2>
+            <h2><b>GOLD   :</b>{{user.gold}}</h2>
+        <br>
+        <br>
+    </footer>
+    </body>
+</html>

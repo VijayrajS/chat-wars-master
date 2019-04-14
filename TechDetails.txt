@@ -1,0 +1,80 @@
+Abhigyan Ghosh
+Vijayraj Shanmugaraj
+Team 37
+
++-------------------+
+| TECHNICAL DETAILS |
++-------------------+
+
+Views :
+-------
+
+1. Registration page at /reg to register new users.
+2. Login Page at /login for user login.
+3. Main Homepage at /home where the action options are given.
+4. Attack Page at /attack where the player chooses to attack one of the six opposite castles.
+5. Quests Page at /quests where the player may choose to go on a quest to the forest.wwsz  
+6. About Page at /about there the player can see his stats.
+7. Shop Page at /shop where the player can buy swords and sheilds
+
+Models :
+--------
+
+1.	Player Account Table : 
+	----------------------
+	|-- 1. id : stores the userid
+	|-- 2. username : stores the username
+	|-- 3. email : stores the user password (for unique purposes)
+	|-- 4. password : stores the password in a hash format
+	
+2.	Player Game Table :
+	-------------------
+	|-- 1. username : stores the username and is the foregin key to player account table
+	|-- 2. state : stores wether the user is attacking a castle or defending his castle for the 24 hr hourly war 
+	|-- 3. castle : stores the user castlename
+	|-- 4. level : user level
+	|-- 5. attack : user attack strength points
+	|-- 6. defense : user defense strength points
+	|-- 7. gold : stores user's gold which can be used to buy swords and sheilds
+	|-- 8. sword: stores user's sword level(increases user's attack points upgradable)
+	|-- 9. sheild: stores user's sheild level(increases user's defense points and upgradable)
+
+3.	Quest Table :
+	-------------
+	|-- 1. id : the quest id 
+	|-- 2. adv : The quest details describing the adventure 
+	|-- 3. gold : The gold earned in the quest
+	|-- 4. exp : The experience points earned in the quest
+	
+
+	
+24 Hour Battle of the Seven Castles :
+-------------------------------------
+It is similar to a small evaluation report for each player how their castles are performing. 
+Before the war every player can choose to attack one of the other 6 castles or defend his own.
+During the war the bot sums up all the defense stats from the players defending that castle and all the attack stats of the players attacking it. 
+If the attack is higher, attackers breach in and steal gold from all the people from the castle, which gets distributed between the attackers. 
+If the defence is higher, then attackers lose and defenders steal attackers' gold.
+
+
+Quests :
+--------
+Each quest is just a random text message selected from a set of texts awarding the player with a certain number of exp points and gold.
+Each quest will be stored in the table and be retrieved in a random manner via it's id. 
+We are planning to have around 10 different quests initially but will add more eventually.
+
+Tech Requirements :
+-------------------
+1. Python 3
+    |-- 1. Flask==0.12.2
+    |-- 2. Flask-Login==0.4.1
+    |-- 3. Flask-SQLAlchemy==2.3.2
+    |-- 4. Flask-WTF==0.14.2
+    |-- 5. Jinja2==2.10
+    |-- 6. SQLAlchemy==1.2.5
+    |-- 7. Werkzeug==0.14.1
+    |-- 8. WTForms==2.1
+
+2. HTML 5 and CSS 3
+
+3. SQLite3

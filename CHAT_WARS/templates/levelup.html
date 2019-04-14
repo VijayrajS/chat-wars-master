@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+	{% block head %}
+		<link type="text/css" href="{{url_for('static', filename='loginReg.css')}}" rel="stylesheet"></link>
+	{% endblock %}
+
+	{% block title %}
+		Congratulations!!!
+	{% endblock %}
+    
+	{% block body %}
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+		<div class="container">
+			<h1 class="P1"><b>CONGRATULATIONS!!!</b></h1>
+			<h2>{{quest}}</h2>
+			<h2>You've Leveled Up!!!!</h2>
+			<div id="put">
+				<a href="#"><button class="button" type="submit" onclick="sendAttack()"><span>Attack</span></button></a>
+				<a href="#"><button class="button" type="submit" onclick="sendDefend()"><span>Defend</span></button></a>
+			</div>
+			<div id="response">
+				<h2></h2>
+			</div>
+			<script type="application/javascript">
+				
+				function sendAttack()
+				{
+					let data = { attack:1,defend:0};
+					let request=$.ajax({
+						url:'http://localhost:5000/increase',
+						method: 'PUT', 
+						data:JSON.stringify(data),
+						contentType: 'application/json'
+					});
+					request.done(function (data) {
+               			$("#attack").html("ATTACK: "+data['attack'])
+               		});
+					document.getElementById('put').style.display = 'none';
+				}
+				function sendDefend()
+				{
+					let data = { attack:0,defend:1};
+					let request=$.ajax({
+						url:'http://localhost:5000/increase',
+						method: 'PUT', 
+						data:JSON.stringify(data),
+						contentType: 'application/json'
+					});
+					request.done(function (data) {
+               			$("div#response > h2").html(data['message'])
+               			$("#defense").html("DEFENSE: "+data['defense'])
+               		});
+					document.getElementById('put').style.display = 'none';
+				}
+			</script>
+		</div>
+	{% endblock %}

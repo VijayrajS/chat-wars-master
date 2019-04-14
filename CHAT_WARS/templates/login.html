@@ -1,0 +1,27 @@
+<DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet"> 
+	<link type="text/css" href="{{url_for('static', filename='loginReg.css')}}" rel="stylesheet"></link>
+	<title>Login</title>
+</head>
+<body>
+	<div class= "container" style="background: #000">
+		<br>
+		<b><div class="ChatWar">S.T.E.L.L.A.R..W.I.N.D.S</div></b>
+		
+		<hr>
+		<h2 style="color: lightgreen">THE WAR IS ON!!!</h2>
+		<br>
+		<form action="{{ url_for('enter') }}" class="form-inline"  method="POST">
+			<input type="text" class="ab" placeholder = "Username" name="username" ><br><br>
+			<input type="password" class="ab" placeholder = "Password" name="password"><br><br><br>
+			<button class="button" style="vertical-align:middle"><span><input type="submit" style="display:none">LOGIN</span></button><br><br>
+		</form>
+		<h1>E.N.T.E.R..X.E.N.A</h1>
+		<h6>NEW TO XENA? REGISTER HERE</h6>
+		<a href="{{ url_for('register')}}"><button class="button" style="vertical-align:middle"><span>REGISTER</span></button></a><br>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+	
+	{% block title %}
+		ATTACK!!!		
+	{% endblock %}
+
+	{% block head %}
+		<link type="text/css" href="{{url_for('static', filename='loginReg.css')}}" rel="stylesheet"></link>
+	{% endblock %}
+
+	
+    
+	{% block body %}
+	<div class="container">
+			<h1 class="P1"><b>ATTACK!!!</b></h1>
+			<h2 class="P1">Ha, bold enough? Choose an Enemy!</h2>
+			
+			<a href="/attack/{{castle[0].name}}"><button class="button" style="vertical-align:middle"><span><img src="{{castle[0].image}}" class="icon"> {{castle[0].name}}</span></button></a>
+			<a href="/attack/{{castle[1].name}}"><button class="button" style="vertical-align:middle"><span><img src="{{castle[1].image}}" class="icon">{{castle[1].name}}</span></button></a>
+			<a href="/attack/{{castle[2].name}}"><button class="button" style="vertical-align:middle"><span><img src="{{castle[2].image}}" class="icon">{{castle[2].name}}</span></button></a>
+			<br>
+			<a href="/attack/{{castle[3].name}}"><button class="button" style="vertical-align:middle"><span><img src="{{castle[3].image}}" class="icon">{{castle[3].name}}</span></button></a>
+			<a href="/attack/{{castle[4].name}}"><button class="button" style="vertical-align:middle"><span><img src="{{castle[4].image}}" class="icon">{{castle[4].name}}</span></button></a>
+			<a href="/attack/{{castle[5].name}}"><button class="button" style="vertical-align:middle"><span><img src="{{castle[5].image}}" class="icon">{{castle[5].name}}</span></button></a>
+		</div>		
+	{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+	{% block title %}
+		Welcome to Chat Wars
+	{% endblock %}
+	{% block head %}
+				<link type="text/css" href="{{url_for('static', filename='loginReg.css')}}" rel="stylesheet"></link>
+	{% endblock %}
+
+	
+    
+	{% block body %}
+		<div class="container">
+			<h1 class="P1"><b>WELCOME TO CHAT WARS</b></h1>
+			<h2 class="P1"><u>Choose an option {{id}}:</u></h2>
+			<a href="/attack"><button class="button" style="vertical-align:middle"><span><img src="https://twemoji.maxcdn.com/2/72x72/2694.png" class="icon">Attack</span></button></a>
+			<a href="/defend"><button class="button" style="vertical-align:middle"><span><img src="https://twemoji.maxcdn.com/2/72x72/1f6e1.png" class="icon">Defend</span></button></a>
+			<br>
+			<a href="/quests"><button class="button" style="vertical-align:middle"><span><img src="https://twemoji.maxcdn.com/2/72x72/1f5fa.png" class="icon">Quests</span></button></a>
+			<a href="/castle"><button class="button" style="vertical-align:middle"><span><img src="https://twemoji.maxcdn.com/2/72x72/1f3f0.png" class="icon">Castle</span></button></a>
+			<br>
+			
+			<a href="/info"><button class="button" onclick="alerttheuser()" style="vertical-align:middle"><span><img src="https://twemoji.maxcdn.com/2/72x72/1f4ac.png" class="icon">Information</span></button></a>
+		</div>	
+	{% endblock %}

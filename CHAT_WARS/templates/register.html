@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<link type="text/css" href="{{url_for('static', filename='loginReg.css')}}" rel="stylesheet"></link>
+	<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet"> 
+</head>
+<body>
+
+	<div class="container">
+		<br>
+		<h1>R.E.G.I.S.T.E.R</h1>
+		<hr>
+		<h2 style="color: lightgreen">STELLAR WARS</h2>
+		<br>
+		<form action="{{ url_for('add') }}" class="form-inline"  method="POST"><br>
+			<input type="text" class="form-control" placeholder = "Username" name="username" required><br><br>
+			<input type="password" class="form-control" placeholder = "Password" name="password" required><br><br>
+			<input type="email" class="form-control" placeholder="Email" name="email" required><br><br>
+			<select name = "castle">
+               <option value = "6">Deerhorn Castle</option>
+               <option value = "7">Dragonscale Castle</option>
+               <option value = "4">Moonlight Castle</option>
+               <option value = "2">Wolfpack Castle</option>
+               <option value = "3">Potato Castle</option>
+               <option value = "5">Highnest Castle</option>
+               <option value = "1">Sharkteeth Castle</option> 
+             </select>
+             <br><br><br>
+			<input class="button" type="submit" value="LOGIN"><br><br>
+		</form>
+	</div>
+</body>
+</html>

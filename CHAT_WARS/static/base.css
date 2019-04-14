@@ -1,0 +1,65 @@
+@font-face{
+    font-family: Gugi;
+    src: url('/static/Gugi-Regular.ttf');
+}
+
+body{
+  font-family: 'Gugi';
+  background: #21364f;
+  scroll-behavior:smooth;
+}
+b{
+
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  text-shadow: 0 0 5px #90EE90;
+  color: green;
+  text-align: center;
+  position:fixed;
+  top:0;
+  height:10%;
+  width:100%;
+  margin:0;
+  padding:0;
+  z-index:10;
+  border-bottom: 6px solid #90EE90;
+}
+
+b{
+    text-shadow: 0 0 5px #FF0000;
+}
+/* Style the links inside the navigation bar */
+.menu {
+	position:relative;
+	float:left;
+    display: inline-block;
+    color: lightgreen;
+    text-align: center;
+    text-decoration: none;
+    font-size:200%;
+    height:100%;
+    width:50%;
+    padding-top:20px;
+    vertical-align:middle;
+}
+
+/* Change the color of links on hover */
+.menu:hover {
+    background-color: #dddddd;
+    color: black;
+}
+
+.content{
+	margin:2%;
+	padding:2%;
+}
+
+footer{
+  background-color: #333;
+  color: red;text-align: center;
+  text-decoration: none;
+  border-top: 6px solid #90EE90;
+  border-bottom: 6px solid #90EE90;
+}

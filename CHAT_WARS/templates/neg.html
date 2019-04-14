@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+	{% block head %}
+		<link type="text/css" href="{{url_for('static', filename='loginReg.css')}}" rel="stylesheet"></link>
+	{% endblock %}
+
+	{% block title %}
+		Not enough gold
+	{% endblock %}
+    
+	{% block body %}
+		<div class="container">
+			<h1 class="P1"><b>NOT ENOUGH GOLD</b></h1>
+			<h2 class="NoGold">You do not have enough gold</h2>
+		</div>
+	{% endblock %}

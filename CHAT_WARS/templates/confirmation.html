@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+	{% block title %}
+		Charge!!!
+	{% endblock %}
+
+	{% block head %}
+				<link type="text/css" href="{{url_for('static', filename='loginReg.css')}}" rel="stylesheet"></link>
+	{% endblock %}
+
+	
+    
+	{% block body %}
+		<div class="container">
+			<h1 class="P1"><b>CHAAARGE!!!</b></h1>
+			<h2>The wind is howling in the meadows, castles are unusually quiet. 
+				Warriors are mending their wounds and repairing armor after a tiresome battle. 
+				All the establishments and castle gates are closed for the next couple of minutes</h2>
+			<h2>You are {{state}} the {{castle}} castle</h2>
+			<h2>Dirty air is soaked with the thick smell of blood. No one ends up here by an accident: you can't leave once you begin your battle. 
+				I hope, your sword is sharp and your shield is steady.</h2>
+		</div>
+	{% endblock %}

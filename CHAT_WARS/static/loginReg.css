@@ -1,0 +1,115 @@
+body{
+	background:#3f3f3d;
+}
+
+h1{
+	color: #a0cdff;
+	text-shadow: 0 0 100px #3e6591 ;
+  font-family: 'Gugi';
+  font-size: 300%;
+}
+hr{
+  color: #5fdefc;
+}
+h2{
+  color: #a0cdff;
+  text-shadow: 0 0 100px #3e6591 ;
+  font-family: 'Gugi';
+  font-size: 200%;
+  text-align:justify;
+  text-align-last: center;
+}
+h6{
+  color: #5fdefc;
+  text-shadow: 0 0 100px #3e6591 ;
+  font-family: 'Gugi';
+}
+b{
+    text-shadow: 0 0 10px #FF0000;
+    color: #FF00FF;
+}
+div{
+	margin: auto;
+}
+.ChatWar{
+  font-size:250%;
+  font-family: 'Gugi';
+}
+.container{
+	text-align: center;
+  border: 6px solid #FF00FF;
+	border-radius: 25px;
+  background: #000;
+  padding: 20px;
+  width: 500px;
+  padding:50px;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333333;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.head{
+
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #272822;
+  border-color: #5fdefc;
+  color: #5fdefc;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-family: 'Gugi';
+  margin: 5px;
+
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+input, select, textarea {
+  font-family : 'Gugi';
+  font-size   : 100%;
+  width : 300px;
+  margin: 1;
+  background: #3f3f3d;
+  color: #5fdefc;
+
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+          box-sizing: border-box;
+}

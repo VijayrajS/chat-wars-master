@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+	{% block title %}
+		Shield upgraded!
+	{% endblock %}
+
+	{% block head %}
+		<link type="text/css" href="{{url_for('static', filename='loginReg.css')}}" rel="stylesheet"></link>
+	{% endblock %}
+
+	
+    
+	{% block body %}
+		<div class="container">
+			<h1 class="P1"><b>SHIELD UPGRADED</b></h1>
+			<h2>Shield upgraded to level {{user.sheild}}</h2>
+		</div>
+	{% endblock %}
